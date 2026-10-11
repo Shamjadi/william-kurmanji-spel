@@ -49,4 +49,19 @@ header{background:linear-gradient(105deg,#183e4d,#2d6b68 65%,#477d62);border-bot
 .boss-health span{background:linear-gradient(90deg,#4c8b78,#b6a268)}
 .quest-card{background:#fffef8}.quest-ready .quest-marker{background:#327e7b}
 @media(max-width:650px){.play-map{height:330px}.fantasy-backdrop{height:100%}.map-node-text{font-size:10px}}
-</style></head><body><header><div class="wrap"><strong>Pirtûka Kurdî ya William Dion</strong><span class="stat" id="topStats">0 XP · 0 stjärnor</span></div></header><div class="wrap"><nav class="nav" id="nav"></nav><main id="app"></main></div><footer class="foot">Kurmanji · 10 helger · Innehållet är ett kursutkast och behöver granskas av en kurmanjitalande vuxen. Framsteg sparas på den här enheten.</footer><script src="game.js?v=40" defer></script></body></html>
+
+/* Version 4.1 - four distinct temples, guardian and visible player */
+.fantasy-v41{height:430px;overflow:hidden}
+.fantasy-v41 .map-node{z-index:6;min-width:100px}
+.fantasy-v41 .map-node-icon{width:78px;height:78px;border-radius:22px;background:#fff7df;border:3px solid #fffdf1;box-shadow:0 6px 0 #786b56,0 12px 18px #203d3550;display:grid;place-items:center}
+.fantasy-v41 .map-node.cleared .map-node-icon{background:#d5f2dc;box-shadow:0 6px 0 #4a876b,0 12px 18px #203d3550}
+.fantasy-v41 .map-node.available .map-node-icon{background:#e5f8ff;outline:3px solid #3186ba}
+.fantasy-v41 .map-node.closed .map-node-icon{filter:grayscale(.8);opacity:.75}
+.fantasy-v41 .map-node-text{max-width:118px;white-space:normal;line-height:1.1;font-size:12px}
+.fantasy-v41 .map-boss .map-node-icon{width:90px;height:90px;border-radius:50%;background:#e4d9f3}
+.fantasy-v41 .map-avatar{z-index:4;width:110px;height:168px;transform:translate(-50%,-50%);pointer-events:none;filter:drop-shadow(0 7px 5px #183c3d77)}
+.fantasy-v41 .map-avatar img{display:block;width:100%;height:100%;object-fit:contain}
+.fantasy-v41 .avatar-label{position:absolute;bottom:-8px;left:50%;transform:translateX(-50%);background:#fff8e6;border-radius:16px;padding:2px 9px;font-size:12px;font-weight:800;color:#245d55;box-shadow:0 2px 8px #153a4a33}
+@media(max-width:650px){.fantasy-v41{height:340px}.fantasy-v41 .map-node{min-width:55px}.fantasy-v41 .map-node-icon{width:48px;height:48px;border-radius:14px}.fantasy-v41 .map-node-icon svg{width:31px;height:35px}.fantasy-v41 .map-boss .map-node-icon{width:52px;height:52px}.fantasy-v41 .map-node-text{font-size:9px;max-width:64px}.fantasy-v41 .map-avatar{width:64px;height:100px}.fantasy-v41 .avatar-label{font-size:9px}}
+@media(prefers-reduced-motion:reduce){.fantasy-v41 .map-avatar{transition:none}}
+</style></head><body><header><div class="wrap"><strong>Pirtûka Kurdî ya William Dion</strong><span class="stat" id="topStats">0 XP · 0 stjärnor</span></div></header><div class="wrap"><nav class="nav" id="nav"></nav><main id="app"></main></div><footer class="foot">Kurmanji · 10 helger · Innehållet är ett kursutkast och behöver granskas av en kurmanjitalande vuxen. Framsteg sparas på den här enheten.</footer><script src="game.js?v=41" defer></script></body></html>
