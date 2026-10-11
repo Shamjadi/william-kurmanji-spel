@@ -18,18 +18,35 @@
 .map-node:focus-visible .map-node-icon{outline:4px solid #ffbd3b;outline-offset:5px}
 .map-node-text{font-size:13px;background:#fffffff2;border-radius:15px;padding:5px 10px;white-space:nowrap;box-shadow:0 2px 6px #1b3b5e22}
 .map-boss .map-node-icon{background:#985bd3}
-.map-avatar{position:absolute;z-index:3;transform:translate(-50%,-82%);width:72px;height:122px;transition:left .5s ease,top .5s ease;pointer-events:none;filter:drop-shadow(0 5px 3px #15354a66)}.map-avatar img{width:100%;height:100%;object-fit:contain;object-position:bottom;display:block}
-
-
+.map-avatar{position:absolute;z-index:3;transform:translate(-50%,-50%);width:46px;height:72px;transition:left .5s ease,top .5s ease;pointer-events:none;filter:drop-shadow(0 4px 3px #15354a55)}
+.map-avatar-head{display:block;margin:auto;width:30px;height:30px;border-radius:50%;background:#efb28b;border:3px solid #244a72;box-shadow:inset 0 8px #57392e}
+.map-avatar-body{display:block;margin:0 auto;width:32px;height:35px;border:3px solid #244a72;background:#16b6ac;border-radius:8px 8px 5px 5px}
 .map-world-label{position:absolute;z-index:5;top:14px;left:16px;background:#ffffffeb;padding:9px 14px;border-radius:14px;font-weight:850}
 .map-tip{position:absolute;z-index:5;right:14px;bottom:10px;background:#ffffffeb;padding:7px 12px;border-radius:12px;font-size:12px;font-weight:650}
 @keyframes map-breathe{50%{transform:scale(1.12)}}
-@media(max-width:600px){.play-map{height:285px}.map-node-icon{width:44px;height:44px;font-size:21px;border-width:3px}.map-node{min-width:55px}.map-node-text{font-size:10px;padding:4px 5px}.map-avatar{transform:translate(-50%,-82%) scale(.72)}.map-tip{font-size:10px;max-width:55%;text-align:right}.map-world-label{font-size:12px}}
+@media(max-width:600px){.play-map{height:285px}.map-node-icon{width:44px;height:44px;font-size:21px;border-width:3px}.map-node{min-width:55px}.map-node-text{font-size:10px;padding:4px 5px}.map-avatar{transform:translate(-50%,-50%) scale(.8)}.map-tip{font-size:10px;max-width:55%;text-align:right}.map-world-label{font-size:12px}}
 @media(prefers-reduced-motion:reduce){.map-node.available .map-node-icon{animation:none}.map-avatar{transition:none}}
 .match-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}.match-grid>div{display:flex;flex-direction:column;gap:10px}.match-choice{width:100%;min-height:55px;border:2px solid #d6e2f6;border-radius:14px;background:#fff;color:#172b61;font-weight:750;padding:12px;cursor:pointer}.match-choice.selected{background:#d9ecff;border-color:#1674df}.match-choice.matched{background:#dcf8e9;border-color:#20a979;opacity:.7}.match-choice:disabled{cursor:default}@media(max-width:480px){.match-grid{gap:8px}.match-choice{font-size:14px;padding:8px}}
 
-/* Version 3.6: Williams eget foto som spelkaraktär */
-.home-william{float:right;max-height:155px;object-fit:contain;object-position:bottom;filter:drop-shadow(0 5px 6px #0b316b33);margin:0 4px 0 12px}
-.boss-william{flex:none;max-height:130px;object-fit:contain;object-position:bottom;filter:drop-shadow(0 4px 5px #0b316b33)}
-@media(max-width:600px){.map-avatar{width:64px;height:106px}.boss-william{width:58px;height:100px}.home-william{width:68px;height:112px}}
-</style></head><body><header><div class="wrap"><strong>Pirtûka Kurdî ya William Dion</strong><span class="stat" id="topStats">0 XP · 0 stjärnor</span></div></header><div class="wrap"><nav class="nav" id="nav"></nav><main id="app"></main></div><footer class="foot">Kurmanji · 10 helger · Innehållet är ett kursutkast och behöver granskas av en kurmanjitalande vuxen. Framsteg sparas på den här enheten.</footer><script src="game.js?v=36" defer></script></body></html>
+/* V4: original fantasy-adventure visual layer; no third-party game artwork */
+:root{--navy:#1c3545;--blue:#327c83;--mint:#528e6b;--cream:#f8f1df;--line:#d8ddcf}
+body{background:linear-gradient(180deg,#edf3e9,#f8f3e8 65%,#e9f0e8);color:#203e48}
+header{background:linear-gradient(105deg,#183e4d,#2d6b68 65%,#477d62);border-bottom:4px solid #c7ad73}
+.btn{background:#326f71}.btn.secondary{background:#e7eee6;color:#29545b}
+.hero{background:linear-gradient(110deg,#dcebe4,#f5edce)!important;border:2px solid #d6d5b4;box-shadow:0 14px 35px #39584c19}
+.world{background:#fffef8;border-color:#d9e1d3}.world:hover{border-color:#6c9a80}
+.world-illustration{border-color:#c5d4bb;box-shadow:0 14px 32px #325b4a20}
+.play-map{height:410px;border-radius:20px;background:#bcd8d0}
+.play-map-sky{background:linear-gradient(180deg,#a8d8d9 0%,#e4f0db 77%,#b6d1ac)}
+.fantasy-backdrop{position:absolute;inset:0;width:100%;height:100%;z-index:0;pointer-events:none}
+.map-route{z-index:1;filter:drop-shadow(0 3px 1px #315a3a55)}
+.map-node{z-index:5}.map-node-icon{background:#b69b68;border:4px solid #fff8df;color:#fff;box-shadow:0 5px 0 #766447,0 10px 15px #214f4255}
+.map-node.available .map-node-icon{background:#388e92}.map-node.cleared .map-node-icon{background:#3e9873}
+.map-node-text{background:#fff9e9!important;border:1px solid #d3c4a0;color:#345349;box-shadow:0 4px 8px #284e3b22}
+.map-world-label,.map-tip{background:#fff9e9ee!important;color:#315a53!important;border:1px solid #d4c8a7}
+.map-avatar{z-index:3;filter:drop-shadow(0 8px 6px #244d4b80)}
+.boss-arena{background:linear-gradient(120deg,#e7eee3,#f4ebd8);border-color:#b6c6ad}
+.boss-health span{background:linear-gradient(90deg,#4c8b78,#b6a268)}
+.quest-card{background:#fffef8}.quest-ready .quest-marker{background:#327e7b}
+@media(max-width:650px){.play-map{height:330px}.fantasy-backdrop{height:100%}.map-node-text{font-size:10px}}
+</style></head><body><header><div class="wrap"><strong>Pirtûka Kurdî ya William Dion</strong><span class="stat" id="topStats">0 XP · 0 stjärnor</span></div></header><div class="wrap"><nav class="nav" id="nav"></nav><main id="app"></main></div><footer class="foot">Kurmanji · 10 helger · Innehållet är ett kursutkast och behöver granskas av en kurmanjitalande vuxen. Framsteg sparas på den här enheten.</footer><script src="game.js?v=40" defer></script></body></html>
